@@ -1,0 +1,9 @@
+[submodule "frontend/ngmug/frontend/ngmug/libs/shared/gh-utils"]
+	path = frontend/ngmug/frontend/ngmug/libs/shared/gh-utils
+	url = https://github.com/Georg632/gh-utils.git
+[submodule "frontend/ngmug/libs/shared/gh-utils"]
+	path = frontend/ngmug/libs/shared/gh-utils
+	url = https://github.com/Georg632/gh-utils.git
+[submodule "frontend/ngmug/libs/shared/gh-headless-ui"]
+	path = frontend/ngmug/libs/shared/gh-headless-ui
+	url = https://github.com/Georg632/gh-headless-ui.git
