@@ -1,0 +1,12 @@
+<div class="flex h-full">
+  <gh-sidebar></gh-sidebar>
+  <div class="flex flex-1 flex-col overflow-hidden">
+    <gh-topbar></gh-topbar>
+    <div class="flex flex-1 items-stretch overflow-hidden">
+      <main class="flex-1 overflow-y-auto">
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+    <gh-footer></gh-footer>
+  </div>
+</div>

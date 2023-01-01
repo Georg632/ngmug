@@ -1,0 +1,14 @@
+{
+  "layouts": {
+    "fullLayout": {
+      "sidebar": {
+        "homeItem": "Home",
+        "componentItem": "Components"
+      }
+    }
+  },
+  "general": {},
+  "auth": {
+    "signInButton": "Sign in"
+  }
+}

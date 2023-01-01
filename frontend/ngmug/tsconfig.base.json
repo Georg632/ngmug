@@ -14,7 +14,17 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@ngmug/ngmug/feature-shell-ngmug": [
+        "libs/ngmug/feature-shell-ngmug/src/index.ts"
+      ],
+      "@ngmug/ngmug/utils": ["libs/ngmug/utils/src/index.ts"],
+      "@ngmug/shared/gh-headless-ui": [
+        "libs/shared/gh-headless-ui/src/index.ts"
+      ],
+      "@ngmug/shared/gh-layout": ["libs/shared/gh-layout/src/index.ts"],
+      "@ngmug/shared/gh-utils": ["libs/shared/gh-utils/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

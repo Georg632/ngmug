@@ -1,0 +1,9 @@
+{
+  "api": {
+    "url": "/api"
+  },
+  "language": ["en-US"],
+  "title": "ngmug",
+  "cookiePrefix": "ngmug",
+  "logoUrl": "./assets/images/logo/ngmug.png"
+}
