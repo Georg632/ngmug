@@ -3,7 +3,7 @@
     <div class="flex flex-shrink-0 items-center">
       <img class="h-8 w-auto" [src]="logoUrl" alt="ngmug" />
     </div>
-    <div class="mt-6 w-full flex-1 space-y-1 px-2">
+    <div class="mt-6 w-full flex-1 space-y-1 px-2 text-center">
       <a
         *ngFor="let item of navbarItems"
         [routerLink]="item.url"
@@ -18,12 +18,14 @@
   </div>
 </div>
 
-<!--
-    Mobile menu
-
-    Off-canvas menu for mobile, show/hide based on off-canvas menu state.
-  -->
-<div class="relative z-20 md:hidden" role="dialog" aria-modal="true">
+<div
+  *ghValue="sidebarExtended$; let sidebarExtended"
+  class="relative z-20 md:hidden opacity-100 transition-opacity ease-linear duration-300"
+  [ngClass]="{ 'opacity-0': !sidebarExtended }"
+  role="dialog"
+  aria-modal="true"
+>
+  {{ sidebarExtended }}
   <!--
       Off-canvas menu backdrop, show/hide based on off-canvas menu state.
 
@@ -64,23 +66,9 @@
         <button
           type="button"
           class="flex h-12 w-12 items-center justify-center rounded-full focus:outline-none focus:ring-2 focus:ring-white"
+          (click)="closeSidebar()"
         >
-          <!-- Heroicon name: outline/x-mark -->
-          <svg
-            class="h-6 w-6 text-white"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
+          <span class="h-6 w-6 text-white mdi mdi-close text-2xl"></span>
           <span class="sr-only">Close sidebar</span>
         </button>
       </div>
