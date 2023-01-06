@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1704.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gh.Ngmug.WebApi", "Gh.Ngmug.WebApi\Gh.Ngmug.WebApi.csproj", "{91038B2A-0ED2-459D-91CA-8332B7B754B0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{047537A2-B5E2-488D-B3DC-85903E4EF4FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gh.Ngmug.Datalayer", "Gh.Ngmug.Datalayer\Gh.Ngmug.Datalayer.csproj", "{B878A827-70A0-4CEA-B2A8-B27955570F00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{91038B2A-0ED2-459D-91CA-8332B7B754B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91038B2A-0ED2-459D-91CA-8332B7B754B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91038B2A-0ED2-459D-91CA-8332B7B754B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91038B2A-0ED2-459D-91CA-8332B7B754B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B878A827-70A0-4CEA-B2A8-B27955570F00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B878A827-70A0-4CEA-B2A8-B27955570F00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B878A827-70A0-4CEA-B2A8-B27955570F00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B878A827-70A0-4CEA-B2A8-B27955570F00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDCE245F-58DB-4115-9ADE-F140489CC8EC}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B878A827-70A0-4CEA-B2A8-B27955570F00} = {047537A2-B5E2-488D-B3DC-85903E4EF4FF}
+	EndGlobalSection
+EndGlobal
