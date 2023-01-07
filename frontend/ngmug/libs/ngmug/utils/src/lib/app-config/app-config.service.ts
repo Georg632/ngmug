@@ -2,7 +2,7 @@ import { PlatformLocation } from '@angular/common';
 import { HttpBackend, HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { GhAppConfig, GhConfigService } from '@ngmug/shared/gh-utils';
+import { GhConfigService } from '@ngmug/shared/gh-utils';
 import { AppConfig } from './app-config';
 
 @Injectable({

@@ -42,6 +42,7 @@ export class GhSidebarComponent {
   constructor(private layoutHelperService: LayoutHelperService) {}
 
   closeSidebar() {
+    console.log('closeSidebar');
     this.sidebarExtended$.next(false);
   }
 }

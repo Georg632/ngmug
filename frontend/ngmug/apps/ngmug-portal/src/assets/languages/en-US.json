@@ -3,7 +3,9 @@
     "signInButton": "Sign in"
   },
   "general": {},
-  "layouts": {},
+  "layouts": {
+    "hideSidebar": "Hide"
+  },
   "navigation": {
     "headlessItem": "Headless-ui",
     "homeItem": "ngmug",

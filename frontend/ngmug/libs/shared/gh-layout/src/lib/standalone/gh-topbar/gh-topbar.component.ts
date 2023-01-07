@@ -14,6 +14,7 @@ export class GhTopbarComponent {
   constructor(private layoutHelperService: LayoutHelperService) {}
 
   extendSidebar() {
+    console.log('extendSidebar');
     this.sidebarExtended$.next(true);
   }
 }

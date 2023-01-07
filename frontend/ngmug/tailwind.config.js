@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./apps/**/*.{html,ts}', './libs/**/*.{html,ts}'],
+  content: [
+    './apps/**/*.{html,ts}',
+    './libs/**/*.{html,ts}',
+    './node_modules/tw-elements/dist/js/**/*.js',
+  ],
   theme: {
     extend: {
       colors: {
@@ -60,6 +64,7 @@ module.exports = {
     },
   },
   plugins: [
+    require('tw-elements/dist/plugin'),
     require('@tailwindcss/forms'),
     function ({ addVariant }) {
       addVariant('active', '&.active');
