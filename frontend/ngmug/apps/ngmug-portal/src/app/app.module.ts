@@ -3,9 +3,9 @@ import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {
   AppConfigService,
-  ROUTING,
   TranslationManagementService,
 } from '@ngmug/ngmug/utils';
+import { TwBreakpointsComponent } from '@ngmug/shared/gh-utils';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';
@@ -47,6 +47,7 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
+    TwBreakpointsComponent,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
