@@ -1,11 +1,12 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+
+import { TwBreakpointsComponent } from '@ngmug/shared/gh-utils';
 import {
   AppConfigService,
   TranslationManagementService,
-} from '@ngmug/ngmug/utils';
-import { TwBreakpointsComponent } from '@ngmug/shared/gh-utils';
+} from '@ngmug/shared/ngmug-utils';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppRoutingModule } from './app-routing.module';

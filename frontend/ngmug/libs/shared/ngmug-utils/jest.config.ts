@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'ngmug-utils',
+  displayName: 'shared-ngmug-utils',
   preset: '../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -9,7 +9,7 @@ export default {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../coverage/libs/ngmug/utils',
+  coverageDirectory: '../../../coverage/libs/shared/ngmug-utils',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },

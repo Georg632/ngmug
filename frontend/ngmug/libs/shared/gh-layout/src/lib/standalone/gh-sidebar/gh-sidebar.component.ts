@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AppConfigService } from '@ngmug/ngmug/utils';
+
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { LayoutHelperService } from '../../helpers/layout-helper.service';
 import { GhValueDirective } from '@ngmug/shared/gh-utils';
+import { AppConfigService } from '@ngmug/shared/ngmug-utils';
 
 export interface NavbarItem {
   url: string[];

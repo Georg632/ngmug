@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { ROUTING } from '@ngmug/ngmug/utils';
+
 import { FullLayoutComponent } from '@ngmug/shared/gh-layout';
+import { ROUTING } from '@ngmug/shared/ngmug-utils';
 
 const routes: Routes = [
   {
