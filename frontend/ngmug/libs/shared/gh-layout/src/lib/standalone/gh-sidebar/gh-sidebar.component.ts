@@ -29,13 +29,13 @@ export class GhSidebarComponent {
       url: ['ngmug'],
     },
     {
-      icon: 'mdi mdi-vector-square',
+      icon: 'mdi mdi-head-remove-outline',
       translationKey: 'navigation.headlessItem',
       url: ['headless-ui'],
     },
     {
-      icon: 'mdi mdi-vector-square',
-      translationKey: 'navigation.obsvState',
+      icon: 'mdi mdi-medical-bag',
+      translationKey: 'navigation.rxjsHelpers',
       url: ['observable-state'],
     },
   ];

@@ -8,7 +8,7 @@
   },
   "navigation": {
     "headlessItem": "Headless-ui",
-    "homeItem": "ngmug",
-    "obsvState": "Observable State"
+    "homeItem": "Ngmug",
+    "rxjsHelpers": "RxJS Helpers"
   }
 }

@@ -15,6 +15,15 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@ngmug/ngmug/feature-about-ngmug": [
+        "libs/ngmug/feature-about-ngmug/src/index.ts"
+      ],
+      "@ngmug/ngmug/feature-components": [
+        "libs/ngmug/feature-components/src/index.ts"
+      ],
+      "@ngmug/ngmug/feature-rxjs-helpers": [
+        "libs/ngmug/feature-rxjs-helpers/src/index.ts"
+      ],
       "@ngmug/ngmug/feature-shell-ngmug": [
         "libs/ngmug/feature-shell-ngmug/src/index.ts"
       ],

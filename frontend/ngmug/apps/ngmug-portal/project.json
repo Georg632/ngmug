@@ -59,7 +59,12 @@
           "browserTarget": "ngmug-portal:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4221,
+        "host": "0.0.0.0",
+        "disableHostCheck": true
+      }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",

@@ -1,9 +1,12 @@
 export enum ROUTING {
-  Ngmug = 'ngmug',
-  NgmugOverview = 'ngmugOverview',
+  AboutNgmug = 'about',
+  AbGetStarted = 'get-started',
 
   HeadlessUi = 'headless-ui',
-  HlOverview = 'overview',
+  HlGetStarted = 'get-started',
+
+  RxjsHelper = 'rxjs-helper',
+  RxGetStarted = 'get-started',
 
   Redirection = '**',
 }

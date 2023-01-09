@@ -1,6 +1,7 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FeatureShellNgmugModule } from '@ngmug/ngmug/feature-shell-ngmug';
 
 import { TwBreakpointsComponent } from '@ngmug/shared/gh-utils';
 import {
@@ -9,7 +10,6 @@ import {
 } from '@ngmug/shared/ngmug-utils';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 
@@ -47,8 +47,8 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule,
     TwBreakpointsComponent,
+    FeatureShellNgmugModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
