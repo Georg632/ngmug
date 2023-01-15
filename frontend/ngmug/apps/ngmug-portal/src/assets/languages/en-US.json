@@ -9,6 +9,7 @@
   "navigation": {
     "headlessItem": "Headless-ui",
     "homeItem": "Ngmug",
-    "rxjsHelpers": "RxJS Helpers"
+    "rxjsHelpers": "RxJS Helpers",
+    "typesafeRouting": "Routing"
   }
 }

@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
-import { ROUTING } from '@ngmug/shared/ngmug-utils';
 import { GetStartedComponent } from './components/get-started/get-started.component';
+import { REDIRECTION } from '@ngmug/shared/gh-utils';
+import { ROUTING } from '@ngmug/shared/ngmug-utils';
 
 const routes: Routes = [
   {
-    path: ROUTING.AbGetStarted,
+    path: ROUTING.getPath((p) => p.ngmug.about),
     component: GetStartedComponent,
   },
   {
-    path: ROUTING.Redirection,
-    redirectTo: ROUTING.AbGetStarted,
+    path: ROUTING.getPath((p) => p.ngmug.about),
+    redirectTo: REDIRECTION,
   },
 ];
 

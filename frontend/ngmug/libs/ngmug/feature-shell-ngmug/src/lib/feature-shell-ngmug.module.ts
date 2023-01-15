@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { RouterModule, Routes } from '@angular/router';
-import { ROUTING } from '@ngmug/shared/ngmug-utils';
 import { FullLayoutComponent } from '@ngmug/shared/gh-layout';
+import { ROUTING } from '@ngmug/shared/ngmug-utils';
+import { REDIRECTION, RoutingHelper } from '@ngmug/shared/gh-utils';
 
 const routes: Routes = [
   {
@@ -11,29 +12,29 @@ const routes: Routes = [
     component: FullLayoutComponent,
     children: [
       {
-        path: ROUTING.AboutNgmug,
+        path: ROUTING.getPath((p) => p.ngmug),
         loadChildren: () =>
           import('@ngmug/ngmug/feature-about-ngmug').then(
             (m) => m.FeatureAboutNgmugModule
           ),
       },
       {
-        path: ROUTING.HeadlessUi,
+        path: ROUTING.getPath((p) => p.headlessui),
         loadChildren: () =>
           import('@ngmug/ngmug/feature-components').then(
             (m) => m.FeatureComponentsModule
           ),
       },
       {
-        path: ROUTING.RxjsHelper,
+        path: ROUTING.getPath((p) => p.rxjs),
         loadChildren: () =>
           import('@ngmug/ngmug/feature-rxjs-helpers').then(
             (m) => m.FeatureRxjsHelpersModule
           ),
       },
       {
-        path: ROUTING.Redirection,
-        redirectTo: ROUTING.AboutNgmug,
+        path: REDIRECTION,
+        redirectTo: ROUTING.getPath((p) => p.ngmug),
       },
     ],
   },

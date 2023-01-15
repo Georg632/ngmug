@@ -5,7 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { LayoutHelperService } from '../../helpers/layout-helper.service';
 import { GhValueDirective } from '@ngmug/shared/gh-utils';
-import { AppConfigService } from '@ngmug/shared/ngmug-utils';
+import { AppConfigService, ROUTING } from '@ngmug/shared/ngmug-utils';
 
 export interface NavbarItem {
   url: string[];
@@ -26,17 +26,22 @@ export class GhSidebarComponent {
     {
       icon: 'mdi mdi-home',
       translationKey: 'navigation.homeItem',
-      url: ['ngmug'],
+      url: ROUTING.getNavRoute((p) => p.ngmug.about),
     },
     {
       icon: 'mdi mdi-head-remove-outline',
       translationKey: 'navigation.headlessItem',
-      url: ['headless-ui'],
+      url: ROUTING.getNavRoute((p) => p.headlessui.about),
     },
     {
       icon: 'mdi mdi-medical-bag',
       translationKey: 'navigation.rxjsHelpers',
-      url: ['observable-state'],
+      url: ROUTING.getNavRoute((p) => p.rxjs.about),
+    },
+    {
+      icon: 'mdi mdi-router',
+      translationKey: 'navigation.typesafeRouting',
+      url: ROUTING.getNavRoute((p) => p.routing.about),
     },
   ];
 
