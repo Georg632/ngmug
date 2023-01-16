@@ -7,12 +7,12 @@ import { REDIRECTION } from '@ngmug/shared/gh-utils';
 
 const routes: Routes = [
   {
-    path: ROUTING.getPath((p) => p.rxjs.about),
+    path: ROUTING.getPath((p) => p.rxjs.getstarted),
     component: GetStartedComponent,
   },
   {
-    path: ROUTING.getPath((p) => p.rxjs.about),
-    redirectTo: REDIRECTION,
+    path: REDIRECTION,
+    redirectTo: ROUTING.getPath((p) => p.rxjs.getstarted),
   },
 ];
 

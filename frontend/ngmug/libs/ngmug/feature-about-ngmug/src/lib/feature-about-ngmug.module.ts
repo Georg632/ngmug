@@ -7,12 +7,12 @@ import { ROUTING } from '@ngmug/shared/ngmug-utils';
 
 const routes: Routes = [
   {
-    path: ROUTING.getPath((p) => p.ngmug.about),
+    path: ROUTING.getPath((p) => p.ngmug.getstarted),
     component: GetStartedComponent,
   },
   {
-    path: ROUTING.getPath((p) => p.ngmug.about),
-    redirectTo: REDIRECTION,
+    path: REDIRECTION,
+    redirectTo: ROUTING.getPath((p) => p.ngmug.getstarted),
   },
 ];
 

@@ -6,5 +6,5 @@ import { ROUTING } from '@ngmug/shared/ngmug-utils';
   templateUrl: './get-started.component.html',
 })
 export class GetStartedComponent {
-  rxjsAboutRoute = ROUTING.getNavRoute((p) => p.rxjs.about);
+  rxjsAboutRoute = ROUTING.getNavRoute((p) => p.rxjs.getstarted);
 }

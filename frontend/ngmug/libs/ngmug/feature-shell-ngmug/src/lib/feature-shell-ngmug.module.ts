@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { FullLayoutComponent } from '@ngmug/shared/gh-layout';
 import { ROUTING } from '@ngmug/shared/ngmug-utils';
-import { REDIRECTION, RoutingHelper } from '@ngmug/shared/gh-utils';
+import { REDIRECTION } from '@ngmug/shared/gh-utils';
 
 const routes: Routes = [
   {

@@ -2,20 +2,19 @@ import { RoutingHelper } from '@ngmug/shared/gh-utils';
 
 export class RoutingMap {
   ngmug = {
-    about: {},
+    getstarted: {},
   };
   headlessui = {
-    about: {},
-    hlAutocomplete: {
-      definition: {},
-    },
+    getstarted: {},
+    combobox: {},
+    dialog: {},
   };
   rxjs = {
-    about: {},
+    getstarted: {},
     stateSubject: {},
   };
   routing = {
-    about: {},
+    getstarted: {},
     parent: {
       parentId: {
         details: {

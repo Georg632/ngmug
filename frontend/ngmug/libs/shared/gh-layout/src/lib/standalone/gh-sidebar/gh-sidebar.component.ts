@@ -26,22 +26,22 @@ export class GhSidebarComponent {
     {
       icon: 'mdi mdi-home',
       translationKey: 'navigation.homeItem',
-      url: ROUTING.getNavRoute((p) => p.ngmug.about),
+      url: ROUTING.getNavRoute((p) => p.ngmug),
     },
     {
       icon: 'mdi mdi-head-remove-outline',
       translationKey: 'navigation.headlessItem',
-      url: ROUTING.getNavRoute((p) => p.headlessui.about),
+      url: ROUTING.getNavRoute((p) => p.headlessui),
     },
     {
       icon: 'mdi mdi-medical-bag',
       translationKey: 'navigation.rxjsHelpers',
-      url: ROUTING.getNavRoute((p) => p.rxjs.about),
+      url: ROUTING.getNavRoute((p) => p.rxjs),
     },
     {
       icon: 'mdi mdi-router',
       translationKey: 'navigation.typesafeRouting',
-      url: ROUTING.getNavRoute((p) => p.routing.about),
+      url: ROUTING.getNavRoute((p) => p.routing),
     },
   ];
 
