@@ -32,7 +32,14 @@
       ],
       "@ngmug/shared/gh-layout": ["libs/shared/gh-layout/src/index.ts"],
       "@ngmug/shared/gh-utils": ["libs/shared/gh-utils/src/index.ts"],
-      "@ngmug/shared/ngmug-utils": ["libs/shared/ngmug-utils/src/index.ts"]
+      "@ngmug/shared/ngmug-utils": ["libs/shared/ngmug-utils/src/index.ts"],
+      "@ngmug/trip-calendar/feature-calendar": [
+        "libs/trip-calendar/feature-calendar/src/index.ts"
+      ],
+      "@ngmug/trip-calendar/feature-shell-tc": [
+        "libs/trip-calendar/feature-shell-tc/src/index.ts"
+      ],
+      "@ngmug/trip-calendar/ui-tc": ["libs/trip-calendar/ui-tc/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
