@@ -50,6 +50,7 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     HttpClientModule,
     TwBreakpointsComponent,
     FeatureShellTcModule,
+    // FeatureShellNgmugModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

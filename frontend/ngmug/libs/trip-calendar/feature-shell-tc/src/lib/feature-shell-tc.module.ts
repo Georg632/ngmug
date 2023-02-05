@@ -15,6 +15,10 @@ const routes: Routes = [
             (m) => m.FeatureCalendarModule
           ),
       },
+      {
+        path: '**',
+        redirectTo: 'calendar',
+      },
     ],
   },
 ];

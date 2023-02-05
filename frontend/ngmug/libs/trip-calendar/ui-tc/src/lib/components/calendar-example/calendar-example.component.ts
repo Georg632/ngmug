@@ -18,15 +18,17 @@ export type Appointment = {
 
 export type AppointmentSegment = {
   id: string;
+  idx: number;
   type: SegmentType;
-  widthPx: string;
   active: boolean;
+  startDateUnix: number;
 };
 
 export enum SegmentType {
   Start = 'Start',
   Between = 'Between',
   End = 'End',
+  Single = 'Single',
 }
 
 export const MAP_SIZE = 42;
@@ -40,14 +42,29 @@ export class CalendarExampleComponent implements AfterViewInit {
 
   SegmentType = SegmentType;
   monthMap: CalendarDay[] = [];
+  startIndexMap: string[] = [];
   appointments: Appointment[] = [
-    // {
-    //   id: '123',
-    //   title: 'Test Appointment1',
-    //   description: 'Test Description',
-    //   startDate: moment(new Date(2023, 1, 14)),
-    //   endDate: moment(new Date(2023, 1, 16)),
-    // },
+    {
+      id: '12345678',
+      title: 'Test Appointment1',
+      description: 'Test Description',
+      startDate: moment(new Date(2023, 0, 1)),
+      endDate: moment(new Date(2023, 0, 30)),
+    },
+    {
+      id: '123',
+      title: 'Test Appointment1',
+      description: 'Test Description',
+      startDate: moment(new Date(2023, 1, 14)),
+      endDate: moment(new Date(2023, 1, 14)),
+    },
+    {
+      id: '123refw',
+      title: 'Test Appointment1',
+      description: 'Test Description',
+      startDate: moment(new Date(2023, 1, 14)),
+      endDate: moment(new Date(2023, 1, 17)),
+    },
     {
       id: 'gg',
       title: 'gg',
@@ -62,19 +79,24 @@ export class CalendarExampleComponent implements AfterViewInit {
       startDate: moment(new Date(2023, 0, 30)),
       endDate: moment(new Date(2023, 2, 12)),
     },
-    // {
-    //   id: '789',
-    //   title: 'Test Appointment3',
-    //   description: 'Test Description',
-    //   startDate: moment(new Date(2023, 0, 31)),
-    //   endDate: moment(new Date(2023, 1, 3)),
-    // },
+    {
+      id: '789',
+      title: 'Test Appointment3',
+      description: 'Test Description',
+      startDate: moment(new Date(2023, 0, 31)),
+      endDate: moment(new Date(2023, 1, 3)),
+    },
   ];
 
   constructor() {}
 
   ngAfterViewInit(): void {
+    this.appointments = this.sortAppointments(this.appointments);
     this.switchMonth(2023, 1);
+  }
+
+  sortAppointments(appointments: Appointment[]): Appointment[] {
+    return appointments.sort((a, b) => a.startDate.unix() - b.startDate.unix());
   }
 
   switchMonth(year: number, month: number) {
@@ -96,18 +118,18 @@ export class CalendarExampleComponent implements AfterViewInit {
 
   parseAppointments(day: moment.Moment): AppointmentSegment[] {
     const dayAppointments: AppointmentSegment[] = [];
-    const itemSize = this.gridContainer.nativeElement.clientWidth / 7;
     dayAppointments.push(
       ...this.appointments
-        .filter((ap) => day.isSame(ap.startDate))
-        .map(
-          (ap) =>
-            <AppointmentSegment>{
-              id: ap.id,
-              type: SegmentType.Start,
-              widthPx: `calc(${itemSize}px - 0.75rem)`,
-            }
-        )
+        .filter((ap) => day.isSame(ap.startDate) && !day.isSame(ap.endDate))
+        .map((ap) => {
+          const seg = <AppointmentSegment>{
+            id: ap.id,
+            type: SegmentType.Start,
+            startDateUnix: ap.startDate.unix(),
+          };
+          this.startIndexMap.push(ap.id);
+          return seg;
+        })
     );
     dayAppointments.push(
       ...this.appointments
@@ -117,24 +139,40 @@ export class CalendarExampleComponent implements AfterViewInit {
             <AppointmentSegment>{
               id: ap.id,
               type: SegmentType.Between,
-              widthPx: `calc(${itemSize}px - 1.5rem)`,
+              startDateUnix: ap.startDate.unix(),
             }
         )
     );
     dayAppointments.push(
       ...this.appointments
-        .filter((ap) => day.isSame(ap.endDate))
+        .filter((ap) => day.isSame(ap.endDate) && !day.isSame(ap.startDate))
+        .map((ap) => {
+          const seg = <AppointmentSegment>{
+            id: ap.id,
+            type: SegmentType.End,
+            startDateUnix: ap.startDate.unix(),
+          };
+          this.startIndexMap = this.startIndexMap.filter((id) => id == ap.id);
+          return seg;
+        })
+    );
+    dayAppointments.push(
+      ...this.appointments
+        .filter((ap) => day.isSame(ap.endDate) && day.isSame(ap.startDate))
         .map(
           (ap) =>
             <AppointmentSegment>{
               id: ap.id,
-              type: SegmentType.End,
-              widthPx: `calc(${itemSize}px - 0.75rem)`,
+              type: SegmentType.Single,
+              startDateUnix: ap.startDate.unix(),
             }
         )
     );
 
-    return dayAppointments;
+    return dayAppointments.sort(
+      (a, b) =>
+        this.startIndexMap.indexOf(a.id) - this.startIndexMap.indexOf(b.id)
+    );
   }
 
   toggleActive(id: string | undefined) {

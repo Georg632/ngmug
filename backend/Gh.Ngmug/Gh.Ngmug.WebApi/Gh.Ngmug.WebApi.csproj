@@ -5,6 +5,8 @@
     <PublishWithAspNetCoreTargetManifest>false</PublishWithAspNetCoreTargetManifest>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <DockerComposeProjectPath>../docker-compose.dcproj</DockerComposeProjectPath>
+    <UserSecretsId>670621be-af53-452f-81f9-754eb82301f2</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

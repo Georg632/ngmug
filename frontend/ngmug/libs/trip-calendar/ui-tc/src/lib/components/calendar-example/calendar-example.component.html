@@ -13,6 +13,7 @@
         class="bg-red-400 z-20 relative"
         (click)="toggleActive(segment.id)"
         [ngClass]="{
+          'mx-2': segment.type == SegmentType.Single,
           'ml-2': segment.type == SegmentType.Start,
           'mr-2': segment.type == SegmentType.End,
           '-mx-[1px]': segment.type == SegmentType.Between,
@@ -32,6 +33,10 @@
           </div>
           <div *ngSwitchCase="SegmentType.End" class="text-right">
             <span>{{ app?.endDate?.format('HH:mm') }}</span>
+          </div>
+          <div *ngSwitchCase="SegmentType.Single" class="text-center">
+            <span>{{ app?.startDate?.format('HH:mm') }}</span>
+            <span> {{ app?.title }}</span>
           </div>
         </ng-container>
       </div>
