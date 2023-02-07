@@ -8,7 +8,6 @@ import {
   AppConfigService,
   TranslationManagementService,
 } from '@ngmug/shared/ngmug-utils';
-import { FeatureShellTcModule } from '@ngmug/trip-calendar/feature-shell-tc';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
@@ -49,8 +48,7 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     BrowserModule,
     HttpClientModule,
     TwBreakpointsComponent,
-    FeatureShellTcModule,
-    // FeatureShellNgmugModule,
+    FeatureShellNgmugModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
