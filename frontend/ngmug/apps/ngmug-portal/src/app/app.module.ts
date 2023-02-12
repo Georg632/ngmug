@@ -16,7 +16,6 @@ import { AppComponent } from './app.component';
 export const environment = {
   settingsFile: `assets/customization/settings.json?version=${Date.now()}`,
   languagesFolder: 'assets/languages/',
-  languagesCustomizationFolder: 'assets/customization/languages/',
   languagesSuffix: `.json?version=${Date.now()}`,
 };
 
@@ -58,8 +57,6 @@ export function HttpLoaderFactory(httpClient: HttpClient): TranslateHttpLoader {
     }),
   ],
   providers: [
-    AppConfigService,
-    TranslationManagementService,
     {
       provide: APP_INITIALIZER,
       useFactory: AppInit,
